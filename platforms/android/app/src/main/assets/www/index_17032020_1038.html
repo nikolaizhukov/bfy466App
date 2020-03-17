@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="
+			default-src 'self' 'unsafe-inline' ws://10.100.1.145:3000 http://code.jquery.com https://code.jquery.com  https://ssl.gstatic.com gap: data: blob: filesystem: ;
+	" />
+
+    <link rel="stylesheet" href="themes/Bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="	crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SWD4TA021-3004</title>
+</head>
+<body>
+<div data-role="popup" id="popupMenu" data-transition="pop" data-theme="a">
+    <ul data-role="listview">
+        <li><a href="#etusivu" id="etuSivuLinkki">Etusivu</a></li>
+        <li><a href="#viivakoodi" id="viivaLinkki">VIIVAKOODI</a></li>
+        <li><a href="#saahaku" id="ohjeLinkki">SÄÄ</a></li>
+        <li><a href="#lista" id="listaLinkki">Lista</a></li>
+        <li><a href="#backend" id="backendLinkki">BackEnd</a></li>
+        <li><a href="#autot" id="autotLinkki">Autot</a></li>
+        <li><a href="#webSQL" id="websqlLinkki">WebSQL</a></li>
+    </ul>
+</div>
+
+<div data-role="page" id="etusivu" data-theme="d">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>SWD4TA021-3004</h1>
+    </div>
+
+    <div role="main" class="ui-content ui-body-d">
+        <div id="paiva"></div>
+        <p id="koodaaja">Nikolai Zhukov / bfy466</p>
+
+
+        <br>
+        <div id="saaVastaus">Säätä haetaan...</div>
+
+        <h1>Ruokalistan hakeminen</h1>
+        <div data-role="main" class="ui-content ui-body-a">
+            <div id="ruokaLista"></div>
+        </div>
+    </div>
+
+
+
+
+    <div data-role="footer">
+        <h1>Mobiiliohjelmointi</h1>
+    </div>
+</div>
+
+<div data-role="page" id="viivakoodi" data-theme="b">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>VIIVAKOODINLUKIJA</h1>
+    </div>
+
+    <div role="main" class="ui-content ui-body-b">
+        <input type="button" class="ui-btn" id="skannaa" value="Skannaa">
+        <div id="skannaustulos"></div>
+        <br>
+
+
+
+
+
+
+        <div role="main" class="ui-content ui-body-b">
+
+            <table data-role="table" id="viivaTaulu" class="ui-responsive">
+
+                <thead>
+                <tr>
+                    <th>Format:</th>
+                    <th>Code:</th>
+                    <th>Date:</th>
+                    <th>Origin:</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div data-role="footer" data-theme="b">
+            <h1>Mobiiliohjelmointi</h1>
+        </div>
+    </div>
+</div>
+
+
+<div data-role="page" id="saahaku" data-theme="c">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>SÄÄ</h1>
+    </div>
+
+    <div data-role="main" class="ui-content ui-body-c">
+        <!-- <div id="saaVastaus">Säätä haetaan...</div> -->
+        <!--<div id="mapKartta" style="height:300px"></div> 		-->
+    </div>
+
+
+
+    <div data-role="footer" data-theme="c">
+        <h1>Mobiiliohjelmointi</h1>
+    </div>
+</div>
+
+<div data-role="page" id="lista">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>LISTA</h1>
+    </div>
+
+    <label for="nimi">Nimi:</label>
+    <input type="text" name="nimiLista" id="nimiLista">
+    <label for="spostiLista">Sähköposti:</label>
+    <input type="text" name="spostiLista" id="spostiLista">
+    <label for="puhelinLista">Puhelin:</label>
+    <input type="text" name="puhelinLista" id="puhelinLista">
+    <hr>
+    <p>
+        <button class="ui-btn ui-btn-inline ui-corner-all" id="lisaaLista">Lisää tiedot</button>
+        <button class="ui-btn ui-btn-inline ui-corner-all" id="tyhjennaLista" disabled>Tyhjennä lista</button>
+    </p>
+    <hr>
+    <p>
+    <ul data-role="listview" id="tietoLista" data-inset="true"></ul>
+    <div data-role="popup" id="popup_vahvistus">
+        <div data-role="content">
+            <h3 id="poistoTxt"></h3>
+            <a class="ui-btn ui-corner-all" data-rel="back">Peruuta</a>
+            <a class="ui-btn ui-corner-all" id="vahvistaPoisto" >Vahvista</a>
+        </div>
+    </div>
+
+
+
+    <div data-role="footer" data-theme="c">
+        <h1>Mobiiliohjelmointi</h1>
+    </div>
+</div>
+
+
+<div data-role="page" id="backend" data-theme="e">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>BACKEND</h1>
+    </div>
+
+    <div data-role="main" class="ui-content ui-body-e">
+        <div id="lisaaTiedot"></div>
+        <form id="lisaaLomake">
+            <label for="nimiBE">Nimi:</label>
+            <input type="text" name="nimiBE" id="nimiBE">
+            <label for="tulosBE">Tulos:</label>
+            <input type="text" name="tulosBE" id="tulosBE">
+            <label for="paivaysBE">Päiväys:</label>
+            <input type="text" name="paivaysBE" id="paivaysBE">
+            <input type="button" class="ui-btn" id="lisaaUusi" value="Lisää uusi">
+        </form>
+        <div id="naytaTiedot">
+            <table data-role="table" id="tiedotTaulu" class="ui-responsive">
+                <thead>
+                <tr>
+                    <th>Nimi:</th>
+                    <th>Tulos:</th>
+                    <th>Päiväys:</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div data-role="footer" data-theme="e">
+            <h1>Mobiiliohjelmointi</h1>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="autot" data-theme="f">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>A U T O T</h1>
+    </div>
+
+    <div role="main" class="ui-content ui-body-f">
+
+        <h3 id="esi"> ok</h3>
+        <table data-role="table" id="autotTaulu" class="ui-responsive">
+
+            <thead>
+            <tr>
+                <th>Format:</th>
+                <th>Code:</th>
+                <th>Date:</th>
+                <th>Date:</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+
+
+        <div data-role="footer" data-theme="f" >
+            <h1>Mobiiliohjelmointi</h1>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="websql" data-theme="c">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>WebSQL</h1>
+    </div>
+
+    <div role="main" class="ui-content ui-body-c">
+
+        <div class="ui-field-contain">
+            <p><label for="nimi">Nimi:</label>
+                <input name="nimi" id="nimi" type="text"></p>
+            <p><label for="slider">JQM kiinnostus:</label>
+                <input name="slider" id="slider" min="0" max="100" value="50" type="range"></p>
+        </div>
+        <div class="ui-field-contain">
+            <button class="ui-btn ui-btn-inline ui-corner-all" name="lisaa" id="lisaa">Lisää nimi listaan</button>
+            <button class="ui-btn ui-btn-inline ui-corner-all" name="tyhjennaListaDB" id="tyhjennaListaDB" disabled>Tyhjennä lista</button>
+        </div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="width:40%">
+                <ul data-inset="true" data-role="listview" id="nimiListaVas">
+                    <li id="sortNimi" data-role="list-divider" role="heading" data-icon="false"><a>Nimi</a></li>
+                </ul>
+            </div>
+            <div class="ui-block-b" style="width:30%">
+                <ul data-role="listview" id="nimiListaKesk" data-inset="true">
+                    <li id="sortPisteet" data-role="list-divider" role="heading" data-icon="false"><a>Pisteet</a></li>
+                </ul>
+            </div>
+            <div class="ui-block-c" style="width:15%">
+                <ul data-role="listview" id="nimiListaMuuta" data-inset="true">
+                    <li data-role="list-divider" role="heading" data-icon="false"><a>&nbsp;</a></li>
+                </ul>
+            </div>
+            <div class="ui-block-c" style="width:15%">
+                <ul data-role="listview" id="nimiListaPoista" data-inset="true">
+                    <li data-role="list-divider" role="heading" data-icon="false"><a>&nbsp;</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="popup" id="popup_muutos" data-theme="d">
+            <div data-role="content">
+                <p><label for="uusiNimi">Nimi:</label>
+                    <input name="uusiNimi" id="uusiNimi" type="text"></p>
+                <p><label for="uusiSlider">JQM kiinnostus:</label>
+                    <input name="uusiSlider" id="uusiSlider" min="0" max="100" value="50" type="range"></p>
+                <a href="#" data-role="button" data-inline="true" data-rel="back">Peruuta</a>
+                <a href="#" data-role="button" data-inline="true" id="vahvistaMuutos" >Vahvista</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div data-role="footer"data-theme="c" >
+        <h1>Mobiiliohjelmointi</h1>
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWmo01EFhVYA_AXj4F5OP3qvZPFbYIxJ4"></script>
+<!--Opettajan api_key-->
+<script>
+		var tietotulokset = []; //Taulukko tuloksia varten
+		var tietorivi; //Muuttuja tieto-objektia varten
+
+        var lon_nyt;
+        var lat_nyt;
+
+		// SAAHAKU
+
+		//Laitetaan kaksi jarrua päälle.
+		var laiteKesken = $.Deferred(); //jarru_1=True
+		var saaSivuKesken = $.Deferred(); //jarru_2=True
+		//var db = null;
+		var db;
+		var orderBy = "";
+
+
+		//Kun molemmat jarrut on avattu aloitamme laitteen koordinaattien etsimisen (Käytä Firefoxia)
+		$.when(laiteKesken, saaSivuKesken).done(saaSivuValmis);
+
+		//Lisätään tapahtumankuuntelija tapahtumalle "onDeviceReady"
+		document.addEventListener("deviceReady", onDeviceReady, false);
+
+
+		//SAAHAKU begin
+
+
+		$(document).one("pagebeforecreate", function () { //Ennen minkä tahansa sivun luomista, tehdään kerran (.one)
+			$("#popupMenu").enhanceWithin().popup();
+		});
+
+		$(document).on("pagecreate", "#etusivu", function() { 	//Sivun luonti, tehdään kerran
+
+		});
+
+		$(document).on("pagecreate", "#viivakoodi", function() {		//Sivun luonti, tehdään kerran
+			//haeTiedot();
+			haePaiva();
+		});
+
+		$(document).on("pagecreate", "#ohje", function() { 	//Sivun luonti, tehdään kerran
+
+		});
+
+		$(document).on("pagecreate", "#saahaku", function() { 	//Sivun luonti, tehdään kerran
+
+		});
+
+		$(document).on("pagecreate", "#backend", function() { 	//Sivun luonti, tehdään kerran
+			$("#paivays").val(haePaiva());
+			haeTiedot();
+		});
+
+		$(document).on("pagecreate", "#autot", function() { 	//Sivun luonti, tehdään kerran
+
+			haeAutoTiedot();
+		});
+
+		$(document).on("pagecreate", "#websql", function() { 	//Sivun luonti, tehdään kerran
+
+			webSQLstart();
+		});
+
+
+
+		$(document).on("pagecontainerbeforeshow", function( event, ui ) {	//Ennen minkä tahansa sivun näyttämistä. (pagebeforeshow is deprecated)
+			var toPage = ui.toPage[0].id; //Mille sivulle ollaan menossa, palauttaa sivun id:n
+			$("#paivays").html(haePaiva());
+			if(toPage=="lista"){
+				haeMuistista();
+			}
+
+			//$("#connection").html(checkConnection());
+			//window.addEventListener("batterystatus", onBatteryStatus, false);
+			//window.addEventListener("online", onOnline, false);
+			//if(toPage=="viivakoodi"){
+			//	$("#esi").html("oOo");
+			//$("#skannaustulos").html("skannaus: " + result.text + " muoto: " + result.format);
+			//	haeTiedot();
+			//}
+		});
+
+		$(document).on("pagecontainershow", function( event, ui ) {	//Mikä tahansa sivu näytetään.
+			var toPage = ui.toPage[0].id; //Mikä sivu on näytetty, palauttaa sivun id:n
+			if(toPage=="etusivu"){
+				haeSaa(60.17,24.94);
+				//haeRuokaLista();
+			}
+
+
+			// if(toPage=="saahaku"){
+				  // haeSaa(60.17,24.94);
+
+				 // saaSivuKesken.resolve(); //jarru_2=False
+			}
+
+		});
+
+		$("#xxxxx").on("tap", function() {
+
+		});
+
+		$("#skannaa").on("tap", function() {
+			lueViivakoodi();
+
+		});
+
+		// Lista -aloitus
+
+		$("#lisaa").on("tap", function() {
+			if($("#nimi").val()!=""&&$("#sposti").val()!=""&&$("#puhelin").val()!=""){
+				tietorivi = {};
+				tietorivi["nimi"]=$("#nimi").val();
+				tietorivi["sposti"]=$("#sposti").val();
+				tietorivi["puhelin"]=$("#puhelin").val();
+				tietotulokset.push(tietorivi);
+				lisaaMuistiin();
+				$("#tyhjennaLista").prop("disabled", false);
+			}
+			$("#nimi, #sposti, #puhelin").val("");
+		});
+
+		$("#tyhjennaLista").on("tap", function() {
+			localStorage.setItem("tiedotObj", "[]");
+			haeMuistista();
+		});
+
+		var poistettava;
+		$(document).on("tap", ".delete", function(event) {
+			poistettava = $(this);	//Palauttaa tapahtuman käynnistäneen objektin
+			$("#poistoTxt").text("Vahvista poisto: " + poistettava.text().split(",")[0] + "?");
+			event.preventDefault(); //Chrome sulkee popupin heti (bugi?). Estetään seuraavan tapahtuman suorittaminen.
+			$("#popup_vahvistus").popup("open");
+		});
+
+		$("#vahvistaPoisto").on("tap", function() {
+			var index = poistettava.index();
+			tietotulokset.splice(index, 1); //Poistetaan objekti listasta (index, lkm)
+			lisaaMuistiin();
+			$("#popup_vahvistus").popup("close");
+		});
+
+		function lisaaMuistiin(){
+			localStorage.setItem("tiedotObj", JSON.stringify(tietotulokset));
+			haeMuistista();
+		}
+
+		function haeMuistista(){
+			$("#tietoLista").html("");
+			if(localStorage.getItem("tiedotObj")!=null){
+				tietotulokset = JSON.parse(localStorage.getItem("tiedotObj"));
+			}
+			if(tietotulokset.length==0){
+				$("#tyhjennaLista").prop("disabled", true);
+			}
+			$.each(tietotulokset, function(index, value){
+				$("#tietoLista").append("<li class='delete' data-icon='delete'><a href='#'>"
+				+ value.nimi + "," + value.sposti + "," + value.puhelin + "</a></li>");
+			});
+			$("#tietoLista").listview("refresh");
+			if ($("#tietoLista li").size() > 0) {
+				$("#tyhjennaLista").prop("disabled", false);
+			}
+		}
+
+
+		// Lista -lopetus
+
+
+		function haePaiva(){
+			var dVal = new Date();
+			var d = dVal.getDate();
+			var m = dVal.getMonth()+1;
+			var y = dVal.getFullYear();
+			if(d<10){
+				d="0"+d;
+			}
+			if(m<10){
+				m="0"+m;
+			}
+			return d+"."+m+"."+y;
+ 		}
+
+
+
+
+
+		function haeRuokaLista() {
+			$.ajax(
+				{
+				url: "https://www.fazerfoodco.fi/modules/json/json/Index?costNumber=0083&language=fi",
+				dataType: "json",
+				timeout: 5000
+				}
+			).done (function(data)
+				{
+				$("#ruokaLista").html("");
+				$("#ruokaLista").append(data.RestaurantName + " ");
+				var d = new Date(data.MenusForDays[0].Date);
+				$("#ruokaLista").append(d.getDate() + "." + (d.getMonth()+1) +"."+ d.getFullYear());
+				var ruokalistat = data.MenusForDays[0].SetMenus;
+				var teksti = "";
+				$.each(ruokalistat, function(i, field) {
+					teksti = teksti + "<p>" + field.Components + "</p>";
+				});
+				$("#ruokaLista").append(teksti);
+				}
+			).fail (function()
+				{
+				$("#ruokaLista").append("Ruokalistaa ei saatu haettua");
+				}
+			)
+		}
+
+
+		function lueViivakoodi(){
+			cordova.plugins.barcodeScanner.scan(
+			function(result){
+				if (result.cancelled==1){
+					$("#skannaustulos").html("skannaus peruutettu");
+				}else{
+					$("#skannaustulos").html("skannaus: " + result.text + " muoto: " + result.format);
+
+					$("#viivaTaulu tbody").append("<tr><td>"
+													+result.format
+													+"</td><td>"
+													+result.text
+													+"</td></tr>");
+
+
+
+				}
+			},function (error) {
+				  $("#skannaustulos").html("Ei löytynyt viivakoodia!");
+			},{
+			  "preferFrontCamera" : false, // iOS and Android
+			  "showFlipCameraButton" : false // iOS and Android
+			  //"SCAN_MODE": "PRODUCT_MODE",
+			  //"FORMATS" : "EAN_13", // default: all but PDF_417 and RSS_EXPANDED
+			  //"orientation" : "landscape" // Android only (portrait|landscape), default unset so it rotates with the device
+			});
+		}
+
+		// BackEnd -aloitus
+		function haeTiedot(){
+			$("#tiedotTaulu tbody").html("");
+			$.getJSON("http://proto387.haaga-helia.fi/~bfy466/backend/select.php", function(result1){
+				$.each(result1, function(i, field1) {
+					$("#tiedotTaulu tbody").append("<tr><td>"
+													+field1.nimi
+													+"</td><td>"
+													+field1.tulos
+													+"</td><td>"
+													+field1.paivays
+													+"</td></tr>");
+				});
+			});
+		}
+
+		$("#lisaaUusi").on("tap", function(){
+			if($("#nimi").val().length>0&&$("#tulos").val().length>0){
+				$.ajax({
+					type: 'POST',
+					data: $("#lisaaLomake").serialize(),
+
+					url: 'http://proto387.haaga-helia.fi/~bfy466/backend/insert.php',
+					success: function(data){
+						haeTiedot();
+						$("#tiedotTaulu thead").append("ok");
+					},
+					error: function(){
+						haeTiedot();
+						$("#tiedotTaulu thead").append("x");
+					}
+				});
+			}
+		});
+
+		// BackEnd -lopetus
+
+		function haeAutoTiedot(){
+			$("#autotTaulu tbody").html("");
+			$.getJSON("http://proto387.haaga-helia.fi/~bfy466/backend/selectAutot.php", function(result){
+
+				$.each(result, function(i, field) {
+					$("#tiedotTaulu thead").append("oooo");
+					$("#autotTaulu tbody").append("<tr><td>"
+													+field.rekno
+													+"</td><td>"
+													+field.merkki
+													+"</td><td>"
+													+field.malli
+													+"</td><td>"
+													+field.vuosi
+													+"</td></tr>");
+
+
+				});
+			});
+		}
+
+	// WEBSQL
+
+
+
+
+		function onDeviceReady() {
+			//laiteKesken.resolve();	//jarru_1=False
+
+
+			db = window.openDatabase("WebSQL_Nimilista", "Ver 1.0", "WebSQL_Nimilista", 1000000); //"Web SQL", "deprecated". name, version, displayname, size (ei Firefox)
+			//db = window.sqlitePlugin.openDatabase({name: "WebSQL_Nimilista.db", location: 'default'}); //"SQLite" (ei Phonegap Desktop)
+			//db = window.sqlitePlugin.openDatabase({name: "tulokset.sqlite", location: 'default'}); //"SQLite" (ei Phonegap Desktop)
+		}
+
+		function webSQLstart() {
+			db.transaction(populateDB, errorDB, successDB);
+
+		}
+
+		function populateDB(tx) { //tx = transaction object
+			//tx.executeSql("DROP TABLE NIMITULOKSET");
+			tx.executeSql('CREATE TABLE IF NOT EXISTS NIMITULOKSET (id INTEGER PRIMARY KEY, nimi, tulos INTEGER, paivays)'); //Autoincrement by default	(id)
+		}
+
+		function errorDB(err) {
+				alert("Error processing SQL: " + err);
+		}
+
+		function successDB() {
+			alert("Success!");
+		}
+
+		function insertDB(tx){
+			var nimi = $("#nimi").val().trim();
+			var pros = $("#slider").val();
+			var d = haeTanaan();
+			tx.executeSql("INSERT INTO NIMITULOKSET (nimi, tulos, paivays) VALUES (?,?,?)", [nimi,pros,d]);
+			$("#slider").val("50");
+			$("#slider").slider("refresh");
+			$("#nimi").val("");
+			$("#nimi").focus();
+			db.transaction(selectDB, errorDB);
+		}
+
+		function updateDB(tx){
+			var nimi = $("#uusiNimi").val().trim();
+			var pros = $("#uusiSlider").val();
+			var d = haeTanaan();
+			tx.executeSql("UPDATE NIMITULOKSET SET nimi=?, tulos=?, paivays=? WHERE id=?", [nimi,pros,d,muutettava_id]);
+			$("#nimi").focus();
+			db.transaction(selectDB, errorDB);
+		}
+
+		function selectDB(tx){
+			tx.executeSql('SELECT * FROM NIMITULOKSET ' + orderBy, [], function(tx, rs) {
+				var i;
+				$("#nimiListaVas li.datarivi, #nimiListaKesk li.datarivi, #nimiListaMuuta li.datarivi, #nimiListaPoista li.datarivi").remove();
+				for (i=0; i<rs.rows.length; i++){
+					$("#nimiListaVas").append("<li data-role='fieldcontain' class='datarivi'>" + rs.rows.item(i).nimi + "</li>");
+					$("#nimiListaKesk").append("<li data-role='fieldcontain' class='datarivi'>" + rs.rows.item(i).tulos + "</li>");
+					$("#nimiListaMuuta").append("<li data-role='fieldcontain' class='datarivi'><span class='edit ui-btn-icon-notext ui-icon-edit ui-icon-notext' id='muutettava_"+rs.rows.item(i).id+"' title='"+rs.rows.item(i).nimi+"_"+rs.rows.item(i).tulos+"'>&nbsp;</span></li>");
+					$("#nimiListaPoista").append("<li data-role='fieldcontain' class='datarivi'><span class='delete ui-btn-icon-notext ui-icon-delete' id='poistettava_"+rs.rows.item(i).id+"'>&nbsp;</span></li>");
+					$("#nimiListaVas").listview("refresh");
+					$("#nimiListaKesk").listview("refresh");
+					$("#nimiListaMuuta").listview("refresh");
+					$("#nimiListaPoista").listview("refresh");
+				}
+				if(i>0){
+					$("#tyhjennaListaDB").prop("disabled", false);
+				}else{
+					$("#tyhjennaListaDB").prop("disabled", true);
+				}
+			});
+		}
+
+		function deleteDB(tx){
+			tx.executeSql('DELETE FROM NIMITULOKSET WHERE id=?', [poistettava_id]);
+			db.transaction(selectDB, errorDB);
+		}
+
+		function deleteAllDB(tx){
+			tx.executeSql('DELETE FROM NIMITULOKSET', []);
+			db.transaction(selectDB, errorDB);
+		}
+
+		var muutettava_id;
+		$(document).on("tap", ".edit", function(event) {
+			muutettava_id = $(this).context.id;
+			muutettava_id = muutettava_id.replace("muutettava_","");
+			var muutettava_nimi = $(this).context.title.split("_")[0];
+			var muutettava_tulos = $(this).context.title.split("_")[1];
+			console.log(muutettava_nimi +" : "+ muutettava_tulos);
+			$("#uusiNimi").val(muutettava_nimi);
+			$("#uusiSlider").val(muutettava_tulos);
+			$("#uusiSlider").slider("refresh");
+			event.preventDefault(); //Chrome sulkee popupin heti (bugi?). Estetään seuraavan tapahtuman suorittaminen.
+			$("#popup_muutos").popup("open");
+			//var obj = $(this);
+			//Objektin ominaisuuksien läpikäynti
+			//for(var key in obj) {
+			//	console.log('key: ' + key + '\n' + 'value: ' + obj[key]);
+			//}
+		});
+
+		var poistettava_id;
+		$(document).on("tap", ".delete", function(event) {
+			poistettava_id = $(this).context.id;
+			poistettava_id=poistettava_id.replace("poistettava_","");
+			db.transaction(deleteDB, errorDB);
+		});
+
+		$(document).one("pagebeforecreate", function () {
+				$("#popupMenu").enhanceWithin().popup();
+				$.event.special.tap.tapholdThreshold = 10; //millisekuntia, eli 1/100 sekuntia nappi pohjassa laukaisee tapahtuman.
+		});
+
+		$(document).on("pagecreate", "#etusivu", function() {
+
+		});
+
+		$(document).on("pagecreate", "#lista", function() {
+
+		});
+		$(document).on("pagecontainerbeforehide", function( event, ui ) {
+
+		});
+		$(document).on("pagecontainerbeforeshow", function( event, ui ) {
+			var toPage = ui.toPage[0].id;
+			if(toPage=="etusivu"){
+
+			}else if(toPage=="lista"){
+				db.transaction(selectDB, errorDB);
+			}
+		});
+		$(document).on("pagecontainershow", function( event, ui ) {
+			var toPage = ui.toPage[0].id;
+			if(toPage=="etusivu"){
+
+			}else if(toPage=="lista"){
+					$(".delete, .edit").css("cursor", "pointer");
+					$("#sortNimi, #sortPisteet").css("cursor", "pointer");
+			}
+		});
+		$(document).on("pagecontainerhide", function( event, ui ) {
+			var prevPage = ui.prevPage[0].id;
+			if(prevPage=="etusivu"){
+
+			}else if(prevPage=="lista"){
+
+			}
+		});
+
+		$("#lisaa").on("tap", function() {
+			var nimi = $("#nimi").val().trim();
+			if (nimi.length > 0) {
+				db.transaction(insertDB, errorDB);
+			}
+		});
+		$("#sortNimi").on("taphold", function() {
+			if(orderBy=="ORDER BY Nimi ASC"){
+				orderBy = "ORDER BY Nimi DESC";
+			}else{
+				orderBy = "ORDER BY Nimi ASC";
+			}
+			db.transaction(selectDB, errorDB);
+		});
+
+		$("#sortPisteet").on("taphold", function() {
+			if(orderBy=="ORDER BY Tulos DESC"){
+				orderBy = "ORDER BY Tulos ASC";
+			}else{
+				orderBy = "ORDER BY Tulos DESC";
+			}
+			db.transaction(selectDB, errorDB);
+		});
+
+		$("#tyhjennaListaDB").on("tap", function() {
+			db.transaction(deleteAllDB, errorDB);
+		});
+
+		$("#vahvistaMuutos").on("tap", function() {
+			db.transaction(updateDB, errorDB);
+			$("#popup_muutos").popup("close");
+		});
+
+		function haeTanaan() {
+			var tanaan = new Date();
+			var kuukausi = tanaan.getMonth() + 1;
+			if (kuukausi < 10) {
+				kuukausi = "0" + kuukausi;
+			}
+			var paiva = tanaan.getDate();
+			if (paiva < 10) {
+				paiva = "0" + paiva;
+			}
+			return paiva + "." + kuukausi + "." + tanaan.getFullYear();
+		}
+
+	// WEBSQL end
+		function saaSivuValmis() {
+
+			navigator.geolocation.getCurrentPosition(onLocationSuccess, onLocationError, { timeout: 20000 });
+				console.log("Paikannus " + position.coords.latitude);
+				console.log("Paikannus " + position.coords.longitude);
+
+			function onLocationSuccess(position) {
+				haeSaa(position.coords.latitude, position.coords.longitude);
+				teeMap(position.coords.latitude, position.coords.longitude);
+
+			}
+			function onLocationError() {
+				console.log("Paikannus ei onnistu");
+			}
+		}
+
+		function haeSaa(lat, lon) {
+			$.ajax(
+				{
+				url: "http://api.openweathermap.org/data/2.5/weather?lang=fi&lat=" + lat
+				+ "&lon=" + lon +"&units=metric&APPID=14420295a6aaaebcf8ab02e2d2f6a670",
+				dataType: "json",
+				timeout: 5000
+				}
+			).done(function(data)
+				{
+				var teksti = "<h3 style='margin-bottom:0em'>" +
+				"<img align='middle' img-src='http://api.openweathermap.org/img/w/" + data.weather[0].icon + "'>" +
+				data.main.temp.toFixed(1) + "'C</h3>";
+				teksti = teksti + "<p>" + data.weather[0].description + "</p>";
+				$("#saaVastaus").html(teksti);
+				}
+			).fail(function()
+				{
+				$("#saaVastaus").html("Säätä ei pystytä hakemaan");
+				}
+			)
+		}
+
+		var map;
+		function teeMap(lat, lon) {
+			// var paikka = new google.maps.LatLng(lat, lon);
+			// var myOptions = {
+			//	zoom:10,
+			//	center: paikka
+			// };
+			// var kartta = new google.maps.Map(document.getElementById("mapKartta"),  myOptions);	//tai $("#mapKartta")[0], myOptions
+			// var marker = new google.maps.Marker({
+			//	position: paikka,
+			//	map: kartta,
+			//	title: "Olet tässä"
+			// })
+			map = new google.maps.Map(document.getElementById('mapKartta'), {
+			center: {lat: -34.397, lng: 150.644},
+			zoom: 8
+        });
+
+		}
+
+
+
+
+
+
+
+
+
+	</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWmo01EFhVYA_AXj4F5OP3qvZPFbYIxJ4&callback=initMap"
+        async defer></script>
+</body>
+
+</html>

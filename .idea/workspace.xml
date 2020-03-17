@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e69b71c9-d9c4-4b38-943e-19cfbacab02d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1ZDAkCuhlLHQzp33DhBN4cqmYVO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="js.phonegap.settings.workdir" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/www" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Idea\bfy466App\www" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PhoneGap/Cordova run" type="PhoneGap" factoryName="PhoneGap/Cordova">
+      <option name="myExecutable" value="C:\Users\ZZZ\AppData\Roaming\npm\phonegap.cmd" />
+      <option name="myWorkDir" value="$PROJECT_DIR$" />
+      <option name="myCommand" value="emulate" />
+      <option name="myPassParent" value="true" />
+      <option name="myPlatform" value="android" />
+      <option name="myExtraArgs" />
+      <option name="hasTarget" value="false" />
+      <option name="target" />
+      <method v="2">
+        <option name="PhonegapTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e69b71c9-d9c4-4b38-943e-19cfbacab02d" name="Default Changelist" comment="" />
+      <created>1584363431864</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584363431864</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="436" y="169" key="#Plugins" timestamp="1584365548461">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state x="436" y="169" key="#Plugins/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584365548461" />
+    <state x="611" y="392" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1584453696930">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state x="611" y="392" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584453696930" />
+    <state width="1638" height="268" key="GridCell.Tab.0.bottom" timestamp="1584433811833">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state width="1638" height="268" key="GridCell.Tab.0.bottom/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584433811833" />
+    <state width="1638" height="268" key="GridCell.Tab.0.center" timestamp="1584433811833">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state width="1638" height="268" key="GridCell.Tab.0.center/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584433811833" />
+    <state width="1638" height="268" key="GridCell.Tab.0.left" timestamp="1584433811833">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state width="1638" height="268" key="GridCell.Tab.0.left/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584433811833" />
+    <state width="1638" height="268" key="GridCell.Tab.0.right" timestamp="1584433811833">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state width="1638" height="268" key="GridCell.Tab.0.right/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584433811833" />
+    <state x="503" y="218" width="672" height="678" key="search.everywhere.popup" timestamp="1584365529649">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state x="503" y="218" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584365529649" />
+  </component>
+</project>
