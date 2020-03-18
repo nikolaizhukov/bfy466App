@@ -825,26 +825,26 @@
 				$("#saaVastaus").html("Säätä ei pystytä hakemaan");
 				}
 			)
+
+            var map;
+            function teeMap(lat, lon) {
+                var paikka = new google.maps.LatLng(lat, lon);
+                var myOptions = {
+                zoom:10,
+                	center: paikka
+                 };
+                 var kartta = new google.maps.Map(document.getElementById("mapKartta"),  myOptions);	//tai $("#mapKartta")[0], myOptions
+                 var marker = new google.maps.Marker({
+                	position: paikka,
+                	map: kartta,
+                	title: "Olet tässä"
+                 })
+                //map = new google.maps.Map(document.getElementById('mapKartta'), {
+                //center: {lat: -34.397, lng: 150.644},
+                //zoom: 8
+            });
+
 		}
-
-		var map;
-		function teeMap(lat, lon) {
-			// var paikka = new google.maps.LatLng(lat, lon);
-			// var myOptions = {
-			//	zoom:10,
-			//	center: paikka
-			// };
-			// var kartta = new google.maps.Map(document.getElementById("mapKartta"),  myOptions);	//tai $("#mapKartta")[0], myOptions
-			// var marker = new google.maps.Marker({
-			//	position: paikka,
-			//	map: kartta,
-			//	title: "Olet tässä"
-			// })
-			map = new google.maps.Map(document.getElementById('mapKartta'), {
-			center: {lat: -34.397, lng: 150.644},
-			zoom: 8
-        });
-
 		}
 
 

@@ -2,11 +2,390 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e69b71c9-d9c4-4b38-943e-19cfbacab02d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/img/logo.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/config_18032020_1206.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/src/ios/CDVLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/src/ios/CDVLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/src/ubuntu/console.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/src/ubuntu/console.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/src/wp/DebugConsole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/tests/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/www/console-via-logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-console/www/logger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/android/ContactAccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/android/ContactAccessorSdk5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/android/ContactInfoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/android/ContactManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/android/PermissionHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactActivity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactAddress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactFindOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactName.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactNews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactOrganization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/ContactPhoto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/contactConsts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/contactUtils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/blackberry10/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/firefoxos/ContactsProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/ios/CDVContact.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/ios/CDVContact.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/ios/CDVContacts.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/ios/CDVContacts.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/ubuntu/contacts.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/ubuntu/contacts.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/windows/ContactProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/windows8/ContactProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/wp/ContactPicker.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/wp/ContactPicker.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/wp/ContactPickerTask.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/wp/Contacts.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/src/wp/ContactsHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ContactAddress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ContactError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ContactField.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ContactFieldType.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ContactFindOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ContactName.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ContactOrganization.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/contacts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ios/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-contacts/www/ios/contacts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/android/AccelListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/blackberry10/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/browser/AccelerometerProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/firefoxos/accelerometer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/ios/CDVAccelerometer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/ios/CDVAccelerometer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/tizen/AccelerometerProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/ubuntu/accelerometer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/ubuntu/accelerometer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/windows/AccelerometerProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/src/wp/Accelerometer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/tests/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/www/Acceleration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-motion/www/accelerometer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/android/CompassListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/blackberry10/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/browser/CompassProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/firefoxos/compass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/ios/CDVCompass.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/ios/CDVCompass.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/tizen/CompassProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/ubuntu/compass.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/ubuntu/compass.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/windows/CompassProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/src/wp/Compass.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/tests/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/types/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/www/CompassError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/www/CompassHeading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-device-orientation/www/compass.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/amazon/FileTransfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/android/FileProgressResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/android/FileTransfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/android/FileUploadResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/ios/CDVFileTransfer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/ios/CDVFileTransfer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/ubuntu/file-transfer.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/ubuntu/file-transfer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/windows/FileTransferProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/src/wp/FileTransfer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/FileTransfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/FileTransferError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/blackberry10/.jshintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/blackberry10/FileTransfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/blackberry10/FileTransferProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/blackberry10/xhrFileTransfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/browser/FileTransfer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/firefoxos/FileTransferProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-file-transfer/www/wp7/base64.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/android/AudioHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/android/AudioPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/android/FileHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/android/PermissionHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/blackberry10/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/ios/CDVSound.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/ios/CDVSound.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/tizen/MediaProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/ubuntu/media.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/ubuntu/media.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/windows/MediaProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/wp/AudioPlayer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/src/wp/Media.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/www/Media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/www/MediaError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-media/www/browser/Media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/android/SplashScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/blackberry10/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/browser/SplashScreenProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/ios/CDVSplashScreen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/ios/CDVSplashScreen.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/ios/CDVViewController+SplashScreen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/ios/CDVViewController+SplashScreen.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/tizen/SplashScreenProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/ubuntu/splashscreen.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/ubuntu/splashscreen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/wp/ResolutionHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/src/wp/SplashScreen.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest.xcworkspace/xcshareddata/CDVSplashScreenTest.xccheckout" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest.xcworkspace/xcshareddata/xcschemes/CordovaLib.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenLibTests/ImageNameTest.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenLibTests/ImageNameTestDelegates.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenLibTests/ImageNameTestDelegates.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenLibTests/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenTest.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenTest.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenTest.xcodeproj/project.xcworkspace/xcshareddata/CDVSplashScreenTest.xccheckout" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenTest.xcodeproj/xcshareddata/xcschemes/CDVSplashScreenLib.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/CDVSplashScreenTest/CDVSplashScreenTest.xcodeproj/xcshareddata/xcschemes/CDVSplashScreenLibTests.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/ios/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/www/splashscreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-splashscreen/www/windows/SplashScreenProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/NOTICE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/RELEASENOTES.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/de/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/de/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/es/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/es/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/fr/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/fr/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/it/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/it/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/ja/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/ja/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/ko/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/ko/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/pl/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/pl/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/ru/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/zh/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/doc/zh/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/src/android/StatusBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/src/browser/statusbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/src/ios/CDVStatusBar.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/src/ios/CDVStatusBar.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/src/windows/StatusBarProxy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/src/wp/StatusBar.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/tests/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/tests/tests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/cordova-plugin-statusbar/www/statusbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/index_ok1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/index_ok2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index_17032020_1038.html" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index_17032020_1038.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/java/com/phonegap/bfy466App/MainActivity.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platforms/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/fetch.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/fetch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/www/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/index_17032020_1038.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index_17032020_1038.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,13 +396,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZDAkCuhlLHQzp33DhBN4cqmYVO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
@@ -34,6 +416,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Idea\bfy466App\www" />
+      <recent name="C:\Idea\bfy466App" />
     </key>
   </component>
   <component name="RunManager">
@@ -64,6 +447,9 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="436" y="169" key="#Plugins" timestamp="1584365548461">
       <screen x="0" y="0" width="1680" height="1006" />
@@ -73,6 +459,10 @@
       <screen x="0" y="0" width="1680" height="1006" />
     </state>
     <state x="611" y="392" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584453696930" />
+    <state x="624" y="265" key="FileChooserDialogImpl" timestamp="1584539093454">
+      <screen x="0" y="0" width="1680" height="1006" />
+    </state>
+    <state x="624" y="265" key="FileChooserDialogImpl/-1920.0.1920.1036/1680.0.1280.996/0.0.1680.1006@0.0.1680.1006" timestamp="1584539093454" />
     <state width="1638" height="268" key="GridCell.Tab.0.bottom" timestamp="1584433811833">
       <screen x="0" y="0" width="1680" height="1006" />
     </state>

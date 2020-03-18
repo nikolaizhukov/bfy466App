@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+			default-src 'self' 'unsafe-inline' ws://10.100.1.145:3000 http://code.jquery.com https://code.jquery.com  https://ssl.gstatic.com gap: data: blob: filesystem: ;
+	" /> -->
+
+    <link rel="stylesheet" href="themes/Bootstrap.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js" integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="	crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>SWD4TA021-3004</title>
+</head>
+<body onload="onLoad()">
+<div data-role="popup" id="popupMenu" data-transition="pop" data-theme="a">
+    <ul data-role="listview">
+        <li><a href="#etusivu" id="etuSivuLinkki">Etusivu</a></li>
+        <li><a href="#saahaku" id="ohjeLinkki">SÄÄ</a></li>
+        <li><a href="#viivakoodi" id="viivaLinkki">VIIVAKOODI</a></li>
+        <li><a href="#backend" id="backendLinkki">BackEnd</a></li>
+        <li><a href="#kuvanote" id="kuvaLinkki">Kuva</a></li>
+        <li><a href="#flickr" id="flickrLinkki">Flickr</a></li>
+
+
+    </ul>
+</div>
+
+<div data-role="page" id="etusivu" data-theme="d">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>SWD4TA021-3004</h1>
+    </div>
+
+    <div role="main" class="ui-content ui-body-a">
+        <div id="paiva"></div>
+        <p id="koodaaja">Nikolai Zhukov / bfy466</p>
+        <p id="tanaan"></p>
+
+        <input type="button" id="piipa" value="piipa" onclick="playBeep(); return false;" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="b" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b">
+        <br>
+
+        <input type="button" id="varahtele" value="värähtele" onclick="varahtele(); return false;" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b">
+        <br>
+
+        <input type="button" id="verkko" value="Verkko" onclick="checkConnection(); return false;" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="d" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b">
+        <p id="verkkoinfo"></p>
+        <br>
+
+        <input type="button" id="geo" value="geo" onclick="checkPosition(); return false;" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="e" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b">
+        <p id="geolocation"></p>
+        <div id="saaVastaus1"></div>
+        <br>
+
+        <input type="button" id="laiteenominaisuudet" value="Laite" onclick="LaiteenOminaisuudet(); return false;" data-role="button" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="f" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b">
+        <p id="laiteinfo"></p>
+        <br>
+
+        <br>
+        <br>
+        <h1>Ruokalistan hakeminen</h1>
+        <div data-role="main" class="ui-content ui-body-a">
+            <div id="ruokaLista"></div>
+        </div>
+    </div>
+
+
+
+
+    <div data-role="footer">
+        <h1>Mobiiliohjelmointi</h1>
+    </div>
+</div>
+
+<div data-role="page" id="saahaku" data-theme="c">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>SÄÄ</h1>
+    </div>
+
+    <div data-role="main" class="ui-content ui-body-c">
+        <div id="saaVastaus">Säätä haetaan...</div>
+        <div id="mapKartta" style="height:300px"></div>
+    </div>
+
+
+    <a href="index.html" data-role="button"data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="a" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b">Etusivulle</a>
+
+    <div data-role="footer" data-theme="c">
+        <h1>Mobiiliohjelmointi</h1>
+    </div>
+</div>
+
+
+<div data-role="page" id="viivakoodi" data-theme="b">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>VIIVAKOODINLUKIJA</h1>
+    </div>
+
+    <div role="main" class="ui-content ui-body-b">
+        <input type="button" class="ui-btn" id="skannaa" value="Skannaa">
+        <div id="skannaustulos"></div>
+        <br>
+
+        <div role="main" class="ui-content ui-body-b">
+
+            <table data-role="table" id="viivaTaulu" class="ui-responsive">
+
+                <thead>
+                <tr>
+                    <th>Format:</th>
+                    <th>Code:</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <br>
+
+
+        </div>
+        <br>
+
+        <div data-role="footer" data-theme="b">
+            <h1>Mobiiliohjelmointi</h1>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div data-role="page" id="backend" data-theme="e">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>BACKEND</h1>
+    </div>
+
+    <div data-role="main" class="ui-content ui-body-a">
+        <div id="lisaaTiedot"></div>
+        <form id="lisaaLomake">
+            <label for="nimi">Nimi:</label>
+            <input type="text" name="nimi" id="nimi">
+            <label for="tulos">Tulos:</label>
+            <input type="text" name="tulos" id="tulos">
+            <label for="paivays">Päiväys:</label>
+            <input type="text" name="paivays" id="paivays">
+            <input type="button" class="ui-btn" id="lisaaUusi" value="Lisää uusi">
+        </form>
+        <div id="naytaTiedot">
+            <table data-role="table" id="tiedotTaulu" class="ui-responsive">
+                <thead>
+                <tr>
+                    <th>Nimi:</th>
+                    <th>Tulos:</th>
+                    <th>Päiväys:</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div data-role="footer">
+            <h1></h1>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="kuvanote" data-theme="b">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>KUVA KAMERALTA</h1>
+    </div>
+
+    <div role="main" class="ui-content ui-body-b">
+        <button onclick="capturePhoto();">Capture Photo</button> <br>
+        <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
+        <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+        <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
+        <style>img{ height: 150px; float: left; }</style>
+        <img id="smallImage" src=""/>
+        <img id="largeImage" src="" />
+
+        <div data-role="footer" data-theme="b">
+            <h1>Mobiiliohjelmointi</h1>
+        </div>
+    </div>
+</div>
+
+<div data-role="page" id="flickr" data-theme="b">
+    <div data-role="header">
+        <a href="#popupMenu" data-rel="popup" data-transition="flip" class="ui-btn ui-btn-inline  ui-corner-all ui-icon-bars ui-btn-icon-notext">Menu</a>
+        <h1>KUVAT FLICKER:lta (JSON)</h1>
+    </div>
+    <button onclick="getFlickr()">HAE KISSOJA !</button>
+    <button onclick="getFlickrDogs()">HAE KOIRIA !</button>
+    <div role="main" class="ui-content ui-body-b">
+        <style>img{ height: 150px; float: left; }</style>
+        <div id="flickrtulos"></div>
+
+    </div>
+    <div data-role="footer" data-theme="b">
+        <h1>Mobiiliohjelmointi</h1>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+<script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+        var pictureSource;   // kuvan lähde
+        var destinationType; // aseta palautuksen muoto
+
+        var map;
+
+        var lon_nyt;
+        var lat_nyt;
+
+        var laiteKesken = $.Deferred(); //jarru_1=True
+		var saaSivuKesken = $.Deferred(); //jarru_2=True
+
+		var pictureSource;   // picture source
+        var destinationType; // sets the format of returned value
+
+        var ean_code;
+
+
+
+        //Kun molemmat jarrut on avattu aloitamme laitteen koordinaattien etsimisen (Käytä Firefoxia)
+		$.when(laiteKesken, saaSivuKesken).done(saaSivuValmis);
+
+        $("#skannaa").on("tap", function() {
+			lueViivakoodi();
+		});
+
+
+        $("#laiteenominaisuudet").on("tap", function() {
+			LaiteenOminaisuudet();
+		});
+
+		$("#varahtele").on("tap", function() {
+			varahtele();
+		});
+
+        $(document).one("pagebeforecreate", function () { //Ennen minkä tahansa sivun luomista, tehdään kerran (.one)
+			$("#popupMenu").enhanceWithin().popup();
+		});
+
+        $(document).on("pagecontainershow", function( event, ui ) {	//Mikä tahansa sivu näytetään.
+			var toPage = ui.toPage[0].id; //Mikä sivu on näytetty, palauttaa sivun id:n
+			if(toPage=="etusivu"){
+				haeRuokaLista();
+			}
+
+            if(toPage=="backend"){
+				haeTiedot();
+			}
+
+			if(toPage=="saahaku"){
+				  //haeSaa(60.17,24.94);
+                  //teeMap(60.17,24.94);
+				  saaSivuKesken.resolve(); //jarru_2=False
+			}
+
+
+
+		});
+
+        // FUNKTIOT
+
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
+
+        function onDeviceReady() {
+            console.log(navigator.camera);
+            pictureSource=navigator.camera.PictureSourceType;
+            destinationType=navigator.camera.DestinationType;
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            laiteKesken.resolve();	//jarru_1=False
+        }
+
+
+
+
+        function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+        element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+                            'Longitude: '          + position.coords.longitude             + '<br />' +
+                            'Timestamp: '          + new Date(position.timestamp)          + '<br />';
+
+            //haeSaa(position.coords.latitude, position.coords.longitude);
+
+        }
+
+
+        function onError(error) {
+            alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        }
+
+        function checkPosition(){
+            var element = document.getElementById('geolocation');
+            element.innerHTML = 'Geo tiedot haetaan...';
+
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            onSuccess();
+
+        }
+
+        function haeTiedot(){
+			$("#tiedotTaulu tbody").html("");
+			$.getJSON("http://proto387.haaga-helia.fi/~bfy466/backend/select.php", function(result){
+				$.each(result, function(i, field) {
+					$("#tiedotTaulu tbody").append("<tr><td>"
+													+field.nimi
+													+"</td><td>"
+													+field.tulos
+													+"</td><td>"
+													+field.paivays
+													+"</td></tr>");
+				});
+			});
+		}
+
+        function lisaaUusi(){
+			if($("#nimi").val().length>0){
+				$.ajax(
+					{
+					type: "POST",
+					data: $("#lisaaLomake").serialize(),
+					url: "http://proto387.haaga-helia.fi/~bfy466/backend/insert.php",
+					success: function(data){
+						alert( "Data Saved: " + data );
+						haeTiedot();
+					},
+					error: function(){
+						haeTiedot();
+					}
+				});
+			}
+		}
+
+        function saaSivuValmis() {
+
+			navigator.geolocation.getCurrentPosition(onLocationSuccess, onLocationError, { timeout: 10000 });
+				console.log("Paikannus " + position.coords.latitude);
+				console.log("Paikannus " + position.coords.longitude);
+
+			function onLocationSuccess(position) {
+				haeSaa(position.coords.latitude, position.coords.longitude);
+				teeMap(position.coords.latitude, position.coords.longitude);
+
+			}
+			function onLocationError() {
+				console.log("Paikannus ei onnistu");
+			}
+		}
+
+
+
+        function LaiteenOminaisuudet(){
+            var element = document.getElementById('laiteinfo');
+            element.innerHTML = 'Malli: '           + device.model              + '<br />' +
+                            'Versio: '          + device.version             + '<br />' +
+                            'Cordova: '          + device.cordova             + '<br />' +
+                            'Tausta: '          +  device.platform       + '<br />';
+        }
+
+        function alertDismissed() {
+           // tyhjä funktio
+        }
+
+        function playBeep() {
+            navigator.notification.beep(3);
+        }
+
+
+
+        function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+
+            //alert('Connection type: ' + states[networkState]);
+
+            var element = document.getElementById('verkkoinfo');
+                    element.innerHTML = 'Connection type: ' + states[networkState];
+        }
+
+
+
+
+        function varahtele() {
+            navigator.vibrate([300, 300, 1000, 300, 500]);
+        }
+
+        function haeSaa(lat, lon) {
+			$.ajax(
+				{
+				url: "http://api.openweathermap.org/data/2.5/weather?lang=fi&lat=" + lat
+				+ "&lon=" + lon +"&units=metric&APPID=14420295a6aaaebcf8ab02e2d2f6a670",
+				dataType: "json",
+				timeout: 5000
+				}
+			).done(function(data)
+				{
+				var teksti = "<h3 style='margin-bottom:0em'>" +
+				"<img align='middle' img-src='http://api.openweathermap.org/img/w/" + data.weather[0].icon + "'>" +
+				data.main.temp.toFixed(1) + "'C</h3>";
+				teksti = teksti + "<p>" + data.weather[0].description + "</p>";
+				$("#saaVastaus").html(teksti);
+				}
+			).fail(function()
+				{
+				$("#saaVastaus").html("Säätä ei pystytä hakemaan");
+				}
+			)
+        }
+
+        function teeMap(lat, lon) {
+                var paikka = new google.maps.LatLng(lat, lon);
+                var myOptions = {
+                zoom:10,
+                	center: paikka
+                 };
+                 var kartta = new google.maps.Map(document.getElementById("mapKartta"),  myOptions);	//tai $("#mapKartta")[0], myOptions
+                 var marker = new google.maps.Marker({
+                	position: paikka,
+                	map: kartta,
+                	title: "Olet tässä"
+                 })
+                //map = new google.maps.Map(document.getElementById('mapKartta'), {
+                //center: {lat: -34.397, lng: 150.644},
+                //zoom: 8
+            }
+
+
+
+
+
+
+        function haeRuokaLista() {
+			$.ajax(
+				{
+				//url: "https://www.fazerfoodco.fi/modules/json/json/Index?costNumber=0083&language=fi",
+				url: "http://www.fazerfoodco.fi/modules/json/json/Index?costNumber=0083&language=fi",
+				dataType: "json",
+				timeout: 5000
+				}
+			).done (function(data)
+				{
+				$("#ruokaLista").html("");
+				$("#ruokaLista").append(data.RestaurantName + " ");
+				var d = new Date(data.MenusForDays[0].Date);
+				$("#ruokaLista").append(d.getDate() + "." + (d.getMonth()+1) +"."+ d.getFullYear());
+				var ruokalistat = data.MenusForDays[0].SetMenus;
+				var teksti = "";
+				$.each(ruokalistat, function(i, field) {
+					teksti = teksti + "<p>" + field.Components + "</p>";
+				});
+				$("#ruokaLista").append(teksti);
+				}
+			).fail (function()
+				{
+				$("#ruokaLista").append("Ruokalistaa ei saatu haettua");
+				}
+			)
+		}
+
+
+		function lueViivakoodi(){
+			cordova.plugins.barcodeScanner.scan(
+			function(result){
+				if (result.cancelled==1){
+					$("#skannaustulos").html("skannaus peruutettu");
+				}else{
+					$("#skannaustulos").html("skannaus: " + result.text + " muoto: " + result.format);
+					$("#ean").html(result.text);
+					ean_code = result.text
+				}
+			},function (error) {
+				  $("#skannaustulos").html("Ei löytynyt viivakoodia!");
+			},{
+			  "preferFrontCamera" : false, // iOS and Android
+			  "showFlipCameraButton" : false // iOS and Android
+			  //"SCAN_MODE": "PRODUCT_MODE",
+			  //"FORMATS" : "EAN_13", // default: all but PDF_417 and RSS_EXPANDED
+			  //"orientation" : "landscape" // Android only (portrait|landscape), default unset so it rotates with the device
+			});
+		}
+
+
+
+
+
+    function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64 encoded image data
+      console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI
+      console.log(imageURI);
+
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
+
+    function getFlickr(){
+        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?",
+        function(data){
+          $.each(data.items, function(i,item){
+            $("<img/>").attr("src", item.media.m).appendTo("#flickrtulos");
+            if ( i == 4 ) return false;
+          });
+        });
+    }
+
+    function getFlickrDogs(){
+        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=dog&tagmode=any&format=json&jsoncallback=?",
+        function(data){
+          $.each(data.items, function(i,item){
+            $("<img/>").attr("src", item.media.m).appendTo("#flickrtulos");
+            if ( i == 4 ) return false;
+          });
+        });
+    }
+
+
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWmo01EFhVYA_AXj4F5OP3qvZPFbYIxJ4&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
